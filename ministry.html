@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ministry.css">
+    <title>Eli modified - Ministry profile</title>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <a href="#"><img src="WhatsApp Image 2023-12-17 at 8.04.31 PM.jpeg" alt="Elisha Logo" width="100" style="height:auto;"></a>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%); /* Cool gradient background */
+            color: #fff;
+            line-height: 1.6;
+        }
+    
+        header {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        }
+    
+        header img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%; /* Rounded logo */
+            object-fit: cover;
+        }
+    
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            margin: 0 15px;
+            transition: all 0.3s ease;
+        }
+    
+        nav a:hover {
+            color: #2575fc;
+            text-decoration: underline;
+        }
+    
+        /* Banner */
+        #banner {
+            background: url('IMG-20241130-WA0005.jpg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            position: relative;
+            padding: 0 20px;
+        }
+    
+        #banner h1 {
+            font-size: 60px;
+            font-weight: 700;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+        }
+    
+        #banner p {
+            font-size: 24px;
+            margin-top: 10px;
+        }
+    
+        #banner button {
+            padding: 12px 24px;
+            background-color: #2575fc;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            margin-top: 20px;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+    
+        #banner button:hover {
+            background-color: goldenrod;
+        }
+    
+        /* Image Section */
+        #images {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+            padding: 50px 20px;
+            background: #333;
+            text-align: center;
+        }
+    
+        .image-block img {
+            width: 100%;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+    
+        .image-block img:hover {
+            transform: scale(1.1);
+        }
+    
+        /* Videos Section */
+        #videos {
+            padding: 50px 20px;
+            background: #222;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+    
+        .video-block {
+            flex: 1 1 300px;
+            margin: 15px;
+            text-align: center;
+        }
+    
+        video {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+        }
+    
+        /* Membership Section */
+        #membership {
+            background: #2575fc;
+            padding: 50px 20px;
+            text-align: center;
+        }
+    
+        #membership h3 {
+            font-size: 2rem;
+            margin-top: 20px;
+        }
+    
+        #membership button {
+            padding: 12px 24px;
+            background-color: #fff;
+            color: #2575fc;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            margin-top: 20px;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+    
+        #membership button:hover {
+            background-color: #6a11cb;
+            color: white;
+        }
+    
+        /* FAQ Section */
+        #faq {
+            background: #333;
+            padding: 50px 20px;
+            text-align: center;
+        }
+    
+        .faq-item {
+            margin-bottom: 20px;
+            background: #444;
+            padding: 20px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+    
+        .faq-item:hover {
+            background-color: #2575fc;
+            color: white;
+        }
+    
+        .faq-item h3 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+    
+        /* Footer */
+        footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            color: #fff;
+            text-align: center;
+        }
+    
+        footer a {
+            color: #2575fc;
+            text-decoration: none;
+            margin: 10px;
+            transition: color 0.3s ease;
+        }
+    
+        footer a:hover {
+            color: #fff;
+        }
+    
+        footer img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+    
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+    
+            nav {
+                margin-top: 15px;
+            }
+    
+            #banner h1 {
+                font-size: 48px;
+            }
+    
+            #banner p {
+                font-size: 20px;
+            }
+    
+            #images {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+    
+            .video-block {
+                flex: 1 1 100%;
+            }
+        }
+    
+        /* 3D hover effect for buttons */
+        button:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
+        }
+    
+        /* 3D hover effect for images */
+        .image-block img:hover {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.5);
+        }
+    
+        /* Smooth transition for these hover effects */
+        button, .image-block img {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+    
+        /* Glowing Text Effect */
+        .glowing-text {
+            font-size: 3rem;
+            color: #fff;
+            text-shadow: 0 0 5px #fff, 0 0 10px #ff00ff, 0 0 15px #ff00ff, 0 0 20px #ff00ff;
+            animation: glowing 1.5s infinite alternate;
+        }
+    
+        @keyframes glowing {
+            0% { text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff, 0 0 15px #ff00ff, 0 0 20px #ff00ff; }
+            100% { text-shadow: 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00ff, 0 0 30px #ff00ff; }
+        }
+    
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+    
+        /* Section fade-in animation */
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+    
+        section {
+            opacity: 0;
+            animation: fadeIn 1s ease-out forwards;
+        }
+    
+        #banner, #images, #videos, #membership, #faq {
+            animation-delay: 0.5s;
+        }
+    
+        section:nth-of-type(2) {
+            animation-delay: 1s;
+        }
+    
+        section:nth-of-type(3) {
+            animation-delay: 1.5s;
+        }
+        /* General Section */
+#join-us {
+    position: relative;
+    background: url('IMG-20241130-WA0005.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+#join-button {
+    padding: 12px 24px;
+    background-color: #2575fc;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 20px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+#join-button:hover {
+    background-color: goldenrod;
+}
+
+/* Overlay Styling */
+
+}
+
+/
+
+.submit-btn:hover {
+    background-color: goldenrod;
+}
+
+/* Youtube Reminder Styling */
+.youtube-reminder {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #aaa;
+    font-style: italic;
+    transition: all 0.3s ease;
+}
+
+.youtube-reminder:hover {
+    color: #fff;
+    text-shadow: 0 0 5px #fff, 0 0 10px #ff00ff;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Media Query */
+@media (max-width: 768px) {
+    .envelope {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .form-container h2 {
+        font-size: 40px;
+    }
+
+    input {
+        font-size: 40px;
+    }
+    /* Add this to your CSS file */
+
+/* Overlay and Form Styling */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);  /* Transparent dark background */
+    display: none;  /* Initially hidden */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it appears on top of everything */
+    overflow: auto;
+}
+
+.left-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background-image: url('card 2.');
+    background-size: cover;
+    opacity: 0.5;  /* Faded effect */
+}
+
+.envelope {
+    width: 80%;
+    height: 600px;
+    background-color: white;
+    position: absolute;
+    top: 10%;
+    right: 0;
+    transform-origin: top right;  /* Anchor the unfolding from top right */
+    transform: scaleX(0);
+    animation: unfold 0.5s ease-out forwards;  /* Animation for unfolding */
+    opacity: 0; /* Start hidden */
+    animation-delay: 1s; /* Delay the form until after envelope unfolds */
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    padding: 20px;
+}
+
+@keyframes unfold {
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+.form-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-container input,
+.form-container button {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.form-container button {
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+}
+
+#join-button {
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.youtube-reminder {
+    margin-top: 20px;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* Prevent the fixed navbar from blocking the form */
+body {
+    margin-top: 50px; /* Adjust this according to the height of your fixed navbar */
+}
+
+}
+
+    </style>
+    
+
+
+
+    <!-- Banner -->
+    <main>
+        <section id="banner">
+            <div>
+                <h1 class="glowing-text">Welcome to Elisha Nabby's Profile</h1>
+
+                <p>Explore the journey of a passionate Fresh anointing musicality</p>
+                <button><a href="about.html" style="color: white; text-decoration: none;">Learn More</a></button>
+
+            </div>
+        </section>
+
+        <!-- Images Section -->
+        <section id="images">
+            <h2>Portfolio Highlights</h2>
+            <div class="image-block">
+                <img src="bass play phot.jpg" alt="Elishas Portrait" width="100" style="height:auto;">
+                <h3>Gods hand &#128526; </h3>
+                <p>A professional portrait showcasing Elisha Nabby  as a dedicated minister for christ</p>
+            </div>
+            <div class="image-block">
+                <img src="cool posture.jpg" alt="Coding Workspace" width="100" style="height:auto;">
+                <h3> Ni God &#128526;</h3>
+                <p>Glimpse of a project workspace demonstrating Elisha's organized environment.</p>
+            </div>
+            <div class="image-block">
+                <img src="k1.jpeg" alt="Team Collaboration" width="100" style="height:auto;">
+                <h3>Team Collaboration</h3>
+                <p>A moment of collaboration, emphasizing teamwork and problem-solving.</p>
+            </div>
+            <div class="image-block">
+                <img src="i2.jpeg" alt="Presentation" width="100" style="height:auto;">
+                <h3>Successful Presentation</h3>
+                <p>A presentation by Elisha demonstrating a ....to a team.</p>
+            </div>
+        </section>
+
+        <!-- Videos Section -->
+        <section id="videos">
+            <h2>Featured Videos</h2>
+            <div class="video-block">
+                <video src="NABBII PRAKO.mp4" controls width="320" style="height:auto;"></video>
+                <h3>The Journey of Elisha Nabby</h3>
+                <p>A short documentary covering Ng'ono David’s journey in software engineering.</p>
+            </div>
+            <div class="video-block">
+                <video src="second vid.mp4" controls width="320" style="height:auto;"></video>
+                <h3>Building up in the early days</h3>
+                <p>Practise days.</p>
+            </div>
+             <div class="video-block">
+                <video src="3rd vid.mp4" controls width="320" style="height:auto;"></video>
+                <h3>still on the Journey of Elisha</h3>
+                <p>Well use of instruments to build the kingdoms worship experience is a ministry as well.</p>
+            </div>
+            <div class="video-block">
+                <video src="nabii PRAKO.mp4" controls width="320" style="height:auto;"></video>
+                <h3>The amatuar days of  Elisha</h3>
+                <p>Dont despise days of small beginning.</p>
+            </div>
+            <div class="video-block">
+                <video src="bass vid.mp4" controls width="320" style="height:auto;"></video>
+                <h3>Trying groove</h3>
+                <p>A short documentary covering Elisha’s journey in the ministry.</p>
+            </div>
+        </section>
+
+        <!-- Membership Section -->
+        <section id="membership">
+            <h2>Membership</h2>
+            <div>
+                <img src="bass play phot.jpg" alt="Membership Icon" width="100" style="height:auto;">
+                <h3>Join the Community</h3>
+                <p>Be part of Elisha's mentorship program to learn and grow together.</p>
+                <section id="join-us" class="join-section">
+                    <div id="banner">
+                        <h1>Join Us Today</h1>
+                        <p>Become part of our community and enjoy exclusive benefits!</p>
+                        <button id="join-button">Join</button>
+                    </div>
+                
+                    <!-- Overlay section with the form that will appear after clicking Join -->
+                    <div id="overlay" class="overlay">
+                        <div class="left-image">
+                            <img src="card 1.jpg.jpg" alt="Faded background image">
+                        </div>
+                        <div class="envelope">
+                            <div class="form-container">
+                                <h2>Sign Up</h2>
+                                <form id="join-form">
+                                    <label for="first-name">First Name</label>
+                                    <input type="text" id="first-name" name="first-name" placeholder="Enter your first name" required>
+                
+                                    <label for="second-name">Second Name</label>
+                                    <input type="text" id="second-name" name="second-name" placeholder="Enter your second name" required>
+                
+                                    <label for="phone-number">Phone Number</label>
+                                    <input type="tel" id="phone-number" name="phone-number" placeholder="Enter your phone number" required>
+                
+                                    <label for="address">Address</label>
+                                    <input type="text" id="address" name="address" placeholder="Enter your address (PO Box/Town/City)" required>
+                
+                                    <label for="email">Email Address</label>
+                                    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                
+                                    <button type="submit" class="submit-btn">Submit</button>
+                                </form>
+                                <p class="youtube-reminder">Join us on YouTube and like our videos!</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                
+                
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq">
+            <h2>Frequently Asked Questions</h2>
+            <div>
+                <div class="faq-item">
+                    <h3>What inspired you to become a music mentor?</h3>
+                    <p>Elisha was inspired by the ability to better the musicality in his church .</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What programming languages do you use?</h3>
+                    <p>Elisha primarily uses JavaScript, Python, and C++, but he adapts based on project requirements.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How do you stay updated with the latest technologies?</h3>
+                    <p>Elisha follows industry trends, attends big concerts eg Agape band , and practices continuously.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What advice would you give to upcoming people?</h3>
+                    <p>A small beginning is a shadow of yor larger futer .</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div>
+            <img src="WhatsApp Image 2023-12-17 at 8.04.31 PM.jpeg" alt="Elishas Logo" width="100" style="height:auto;">
+            <div>
+                <a href="https://twitter.com/Elisha g_naby" target="_blank">Twitter</a>
+                <a href="mailto:elishajanaby@gmail.com">Email</a>
+                <a href="tel:+254799523547">Phone</a>
+            </div>
+            <p>&copy; 2024 Elisha Nabby. All rights reserved.</p>
+        </div>
+    </footer>
+    <!-- Particle.js Script -->
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+<script>
+    particlesJS("banner", {
+        particles: {
+            number: {
+                value: 100,
+                density: {
+                    enable: true,
+                    value_area: 800
+                }
+            },
+            shape: {
+                type: "circle",
+                stroke: {
+                    width: 0,
+                    color: "#000000"
+                }
+            },
+            opacity: {
+                value: 0.5,
+                random: true,
+                anim: {
+                    enable: true,
+                    speed: 1,
+                    opacity_min: 0.1
+                }
+            },
+            size: {
+                value: 3,
+                random: true
+            },
+            move: {
+                enable: true,
+                speed: 6,
+                direction: "none",
+                random: true
+            }
+        },
+        interactivity: {
+            detect_on: "window",
+            events: {
+                onhover: {
+                    enable: true,
+                    mode: "repulse"
+                }
+            }
+        },
+        retina_detect: true
+    });
+    // Add this script at the end of your HTML, or in a separate JS file
+
+document.getElementById("join-button").addEventListener("click", function() {
+    // Show the overlay
+    document.getElementById("overlay").style.display = "flex";
+    
+    // Unfold the form after a slight delay
+    setTimeout(function() {
+        document.querySelector(".envelope").style.transform = "scaleX(1)";
+    }, 50);  // Slight delay for smooth animation
+});
+
+// Close the overlay when the form is submitted (optional)
+document.getElementById("join-form").addEventListener("submit", function(event) {
+    event.preventDefault();  // Prevent actual form submission for demo purposes
+    document.getElementById("overlay").style.display = "none";  // Hide the overlay
+});
+document.getElementById('join-button').addEventListener('click', function() {
+    document.getElementById('overlay').style.display = 'flex';
+});
+
+// Handle form submission
+document.getElementById('join-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form from actually submitting
+
+    // Form validation
+    const firstName = document.getElementById('first-name').value;
+    const secondName = document.getElementById('second-name').value;
+    const phoneNumber = document.getElementById('phone-number').value;
+    const address = document.getElementById('address').value;
+    const email = document.getElementById('email').value;
+
+    if (firstName === "" || secondName === "" || phoneNumber === "" || address === "" || email === "") {
+        alert("Please fill out all fields!");
+        return;
+    }
+
+    // Simulate successful form submission
+    alert("Form submitted successfully! Redirecting to sign-up page.");
+
+    // Redirect to another page (you can change the URL here)
+    window.location.href = '/sign-up'; // Replace with your actual sign-up page URL
+});
+
+   
+
+</script>
+
+
+</body>
+</html>
