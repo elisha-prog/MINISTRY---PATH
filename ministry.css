@@ -1,0 +1,321 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+header img {
+    width: 100px;
+    height: auto;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Banner Section */
+#banner {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#banner h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#banner p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+#banner button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #fff;
+    color: #007BFF;
+    border: none;
+    cursor: pointer;
+}
+
+#banner button:hover {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+/* Portfolio Section */
+#images {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#images h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.image-block {
+    display: inline-block;
+    width: 22%;
+    margin: 15px;
+    text-align: center;
+}
+
+.image-block img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.image-block h3 {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.image-block p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Video Section */
+#videos {
+    padding: 50px 20px;
+    background-color: #f1f1f1;
+    text-align: center;
+}
+
+#videos h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.video-block {
+    display: inline-block;
+    width: 45%;
+    margin: 15px;
+}
+
+video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.video-block h3 {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.video-block p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Membership Section */
+#membership {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #007BFF;
+    color: #fff;
+}
+
+#membership h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+#membership div {
+    display: inline-block;
+    text-align: center;
+}
+
+#membership img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+#membership button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #fff;
+    color: #007BFF;
+    border: none;
+    cursor: pointer;
+}
+
+#membership button:hover {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+/* FAQ Section */
+#faq {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#faq h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+}
+
+.faq-item h3 {
+    font-size: 20px;
+    color: #007BFF;
+}
+
+.faq-item p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Footer Section */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+footer a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .image-block {
+        width: 45%;
+    }
+
+    .video-block {
+        width: 100%;
+    }
+
+    .faq-item h3 {
+        font-size: 18px;
+    }
+
+    .faq-item p {
+        font-size: 14px;
+    }
+
+    #banner h1 {
+        font-size: 28px;
+    }
+
+    #banner p {
+        font-size: 16px;
+    }
+
+    #images, #videos, #membership, #faq {
+        padding: 30px 10px;
+    }
+
+    header nav a {
+        font-size: 14px;
+        margin: 0 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .image-block, .video-block {
+        width: 100%;
+    }
+
+    header {
+        padding: 10px;
+    }
+
+    header img {
+        width: 80px;
+    }
+
+    #banner h1 {
+        font-size: 24px;
+    }
+
+    #banner p {
+        font-size: 14px;
+    }
+
+    #banner button {
+        font-size: 14px;
+    }
+
+    footer img {
+        width: 80px;
+    }
+
+    footer p {
+        font-size: 12px;
+    }
+}
+nav a:active, footer a:active {
+    text-decoration: none;
+}
+
+header img {
+    width: 150px;  /* Increase the width to make it larger */
+    height: 150px; /* Set the height to be the same as width to maintain a square shape */
+    border-radius: 50%; /* This makes the image rounded */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    margin: 0 auto; /* Centers the image horizontally */
+}
+footer img{
+    width: 150px;  /* Increase the width to make it larger */
+    height: 150px; /* Set the height to be the same as width to maintain a square shape */
+    border-radius: 50%; /* This makes the image rounded */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    margin: 0 auto; /* Centers the image horizontally */
+
+}
